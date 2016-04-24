@@ -10,6 +10,7 @@
 
 @interface ViewController () <UITextFieldDelegate>
 
+@property (weak, nonatomic) IBOutlet UINavigationBar *navBar;
 @property (weak, nonatomic) IBOutlet UIScrollView *scroller;
 @property (weak, nonatomic) IBOutlet UITextField *firstName;
 @property (weak, nonatomic) IBOutlet UITextField *lastName;
@@ -30,6 +31,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // Resize navigation bar, change bar and buttons color
+    self.navBar.frame = CGRectMake(self.navBar.frame.origin.x, self.navBar.frame.origin.y, self.navBar.frame.size.width, 64);
+    [self.navBar setTitleTextAttributes: @{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    self.navBar.tintColor = [UIColor whiteColor];
+    self.navBar.barTintColor = [UIColor blueColor];
     
     //create array with textfields
     NSArray *fields = @[self.firstName,
@@ -60,6 +67,7 @@
     {
         contentRect = CGRectUnion(contentRect, view.frame);
     }
+//    contentRect.size.height += 20.0f;
     self.scroller.contentSize = contentRect.size;
 }
 
@@ -74,7 +82,7 @@
 - (void)registerForKeyboardNotifications
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWasShown:)
+                                             selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardDidShowNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -89,7 +97,7 @@
     [self.keyboardControls setActiveField:textField];
     if (textField.tag == 0)
     {
-        self.scroller.contentOffset = CGPointZero;
+        [self.scroller setContentOffset:CGPointZero animated:YES];
     }
 }
 
@@ -101,10 +109,9 @@
 
 #pragma mark - Scroller Movements
 
-// Called when the UIKeyboardDidShowNotification is sent.
-- (void)keyboardWasShown:(NSNotification *)aNotification
+- (void)keyboardWillShow:(NSNotification *)notification
 {
-    NSDictionary* info = [aNotification userInfo];
+    NSDictionary* info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, kbSize.height, 0.0);
     self.scroller.contentInset = contentInsets;
@@ -125,6 +132,7 @@
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.scroller.contentInset = contentInsets;
     self.scroller.scrollIndicatorInsets = contentInsets;
+    [self.scroller setContentOffset:CGPointZero animated:YES];
 }
 
 @end

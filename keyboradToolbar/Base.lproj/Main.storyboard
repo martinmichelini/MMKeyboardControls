@@ -1,115 +1,89 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHp-DL-nHc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <navigationBar contentMode="scaleToFill" id="H59-K6-NbQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Keyboard Controls" id="UFN-9m-7lj"/>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pHp-DL-nHc">
+                                <rect key="frame" x="0.0" y="65" width="375" height="602"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RcS-Rh-wZ2">
-                                        <rect key="frame" x="112" y="59" width="97" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="97" id="zZy-vF-Bg0"/>
-                                        </constraints>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="first" textAlignment="center" minimumFontSize="17" id="RcS-Rh-wZ2">
+                                        <rect key="frame" x="139" y="60" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gzf-96-Peb">
-                                        <rect key="frame" x="112" y="161" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="center" minimumFontSize="17" id="Gzf-96-Peb">
+                                        <rect key="frame" x="139" y="162" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RCk-bV-u7X">
-                                        <rect key="frame" x="112" y="215" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="city" textAlignment="center" minimumFontSize="17" id="RCk-bV-u7X">
+                                        <rect key="frame" x="139" y="216" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zip" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lnd-YJ-wM1">
-                                        <rect key="frame" x="112" y="317" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="zip" textAlignment="center" minimumFontSize="17" id="Lnd-YJ-wM1">
+                                        <rect key="frame" x="139" y="318" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZEx-nB-eqa">
-                                        <rect key="frame" x="112" y="268" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="state" textAlignment="center" minimumFontSize="17" id="ZEx-nB-eqa">
+                                        <rect key="frame" x="139" y="269" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dob" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N3l-RZ-Coo">
-                                        <rect key="frame" x="112" y="370" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="dob" textAlignment="center" minimumFontSize="17" id="N3l-RZ-Coo">
+                                        <rect key="frame" x="139" y="371" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wJ8-6q-pRg">
-                                        <rect key="frame" x="112" y="480" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="phone" textAlignment="center" minimumFontSize="17" id="wJ8-6q-pRg">
+                                        <rect key="frame" x="139" y="481" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jir-p9-P0M">
-                                        <rect key="frame" x="112" y="426" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" id="Jir-p9-P0M">
+                                        <rect key="frame" x="139" y="427" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sU4-aS-Pob">
-                                        <rect key="frame" x="112" y="113" width="97" height="30"/>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="last" textAlignment="center" minimumFontSize="17" id="sU4-aS-Pob">
+                                        <rect key="frame" x="139" y="114" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Jir-p9-P0M" firstAttribute="top" secondItem="N3l-RZ-Coo" secondAttribute="bottom" constant="26" id="3QF-04-5pK"/>
-                                    <constraint firstItem="N3l-RZ-Coo" firstAttribute="leading" secondItem="Jir-p9-P0M" secondAttribute="leading" id="631-tZ-sWC"/>
-                                    <constraint firstItem="ZEx-nB-eqa" firstAttribute="trailing" secondItem="Lnd-YJ-wM1" secondAttribute="trailing" id="69k-og-QeX"/>
-                                    <constraint firstItem="sU4-aS-Pob" firstAttribute="top" secondItem="RcS-Rh-wZ2" secondAttribute="bottom" constant="24" id="7R5-Hp-5s0"/>
-                                    <constraint firstItem="RcS-Rh-wZ2" firstAttribute="trailing" secondItem="sU4-aS-Pob" secondAttribute="trailing" id="8jX-Y8-9m6"/>
-                                    <constraint firstItem="RCk-bV-u7X" firstAttribute="top" secondItem="Gzf-96-Peb" secondAttribute="bottom" constant="24" id="A6g-Tv-DuE"/>
-                                    <constraint firstItem="RCk-bV-u7X" firstAttribute="leading" secondItem="Gzf-96-Peb" secondAttribute="leading" id="DCJ-OS-2uS"/>
-                                    <constraint firstItem="Gzf-96-Peb" firstAttribute="top" secondItem="sU4-aS-Pob" secondAttribute="bottom" constant="18" id="GA3-KF-wEA"/>
-                                    <constraint firstItem="Gzf-96-Peb" firstAttribute="trailing" secondItem="RCk-bV-u7X" secondAttribute="trailing" id="I7V-lW-uBK"/>
-                                    <constraint firstItem="sU4-aS-Pob" firstAttribute="trailing" secondItem="Gzf-96-Peb" secondAttribute="trailing" id="KLe-tk-F7s"/>
-                                    <constraint firstItem="wJ8-6q-pRg" firstAttribute="leading" secondItem="Jir-p9-P0M" secondAttribute="leading" id="Kh5-rh-vRK"/>
-                                    <constraint firstItem="RCk-bV-u7X" firstAttribute="leading" secondItem="ZEx-nB-eqa" secondAttribute="leading" id="Qb9-Qi-sT6"/>
-                                    <constraint firstItem="Jir-p9-P0M" firstAttribute="centerX" secondItem="pHp-DL-nHc" secondAttribute="centerX" id="WFS-gv-6dq"/>
-                                    <constraint firstItem="wJ8-6q-pRg" firstAttribute="top" secondItem="Jir-p9-P0M" secondAttribute="bottom" constant="24" id="WRh-tA-ciT"/>
-                                    <constraint firstItem="Lnd-YJ-wM1" firstAttribute="leading" secondItem="ZEx-nB-eqa" secondAttribute="leading" id="ffe-Dp-zJQ"/>
-                                    <constraint firstItem="Lnd-YJ-wM1" firstAttribute="leading" secondItem="N3l-RZ-Coo" secondAttribute="leading" id="flv-Cr-ETg"/>
-                                    <constraint firstItem="wJ8-6q-pRg" firstAttribute="trailing" secondItem="Jir-p9-P0M" secondAttribute="trailing" id="gGY-Ca-gVm"/>
-                                    <constraint firstItem="N3l-RZ-Coo" firstAttribute="trailing" secondItem="Jir-p9-P0M" secondAttribute="trailing" id="gN7-l0-MyB"/>
-                                    <constraint firstAttribute="trailing" secondItem="RcS-Rh-wZ2" secondAttribute="trailing" constant="111" id="gQB-6i-nS0"/>
-                                    <constraint firstAttribute="bottom" secondItem="wJ8-6q-pRg" secondAttribute="bottom" constant="58" id="gXI-Mr-6eg"/>
-                                    <constraint firstItem="Gzf-96-Peb" firstAttribute="leading" secondItem="sU4-aS-Pob" secondAttribute="leading" id="hfO-aF-GAs"/>
-                                    <constraint firstItem="Lnd-YJ-wM1" firstAttribute="top" secondItem="ZEx-nB-eqa" secondAttribute="bottom" constant="19" id="lUJ-pX-Ujv"/>
-                                    <constraint firstItem="RcS-Rh-wZ2" firstAttribute="top" secondItem="pHp-DL-nHc" secondAttribute="top" constant="59" id="pDo-hB-W19"/>
-                                    <constraint firstItem="ZEx-nB-eqa" firstAttribute="trailing" secondItem="RCk-bV-u7X" secondAttribute="trailing" id="uKg-YD-uNQ"/>
-                                    <constraint firstItem="N3l-RZ-Coo" firstAttribute="top" secondItem="Lnd-YJ-wM1" secondAttribute="bottom" constant="23" id="vLF-gW-n84"/>
-                                    <constraint firstItem="N3l-RZ-Coo" firstAttribute="trailing" secondItem="Lnd-YJ-wM1" secondAttribute="trailing" id="vsP-gg-gYL"/>
-                                    <constraint firstItem="ZEx-nB-eqa" firstAttribute="top" secondItem="RCk-bV-u7X" secondAttribute="bottom" constant="23" id="wUB-g5-oaJ"/>
-                                    <constraint firstItem="sU4-aS-Pob" firstAttribute="leading" secondItem="RcS-Rh-wZ2" secondAttribute="leading" id="zLB-lr-Oep"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="pHp-DL-nHc" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="3I4-HX-94C"/>
-                            <constraint firstAttribute="trailing" secondItem="pHp-DL-nHc" secondAttribute="trailing" id="Ppc-3y-HFf"/>
-                            <constraint firstItem="pHp-DL-nHc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Uhw-Li-ha1"/>
-                            <constraint firstItem="pHp-DL-nHc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xg1-a2-GBo"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.8630872543" green="0.90043520489999995" blue="0.93959731540000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="address" destination="Gzf-96-Peb" id="hMY-mu-cbQ"/>
                         <outlet property="city" destination="RCk-bV-u7X" id="2LN-xi-OTg"/>
@@ -117,6 +91,7 @@
                         <outlet property="email" destination="Jir-p9-P0M" id="XaR-fS-wHn"/>
                         <outlet property="firstName" destination="RcS-Rh-wZ2" id="HAs-ya-knM"/>
                         <outlet property="lastName" destination="sU4-aS-Pob" id="Ens-Hh-2IC"/>
+                        <outlet property="navBar" destination="H59-K6-NbQ" id="ycV-eA-MN4"/>
                         <outlet property="phone" destination="wJ8-6q-pRg" id="Lr8-YE-AYi"/>
                         <outlet property="scroller" destination="pHp-DL-nHc" id="nxE-27-IEs"/>
                         <outlet property="state" destination="ZEx-nB-eqa" id="cT4-Cs-MgV"/>
@@ -125,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="565" y="479"/>
+            <point key="canvasLocation" x="300.5" y="452.5"/>
         </scene>
     </scenes>
 </document>
